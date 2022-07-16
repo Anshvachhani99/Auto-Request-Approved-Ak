@@ -4,16 +4,31 @@
 import contextlib
 import re
 import logging
+import os 
+import logging.config 
 
 from aioredis import Redis
 from decouple import config
 from telethon import TelegramClient, events, Button, types, functions, errors
+from pyrogram import Client 
 
+
+logging.config.fileConfig("logging.conf")
+logging.getLogger().setLevel(logging.INFO)
+logging.getLogger("pyrogram").setLevel(logging.ERROR)
 logging.basicConfig(
     level=logging.INFO, format="[%(levelname)s] %(asctime)s - %(message)s"
 )
 log = logging.getLogger("ChannelActions")
 log.info("\n\nStarting...\n")
+
+FORCE_SUB = os.environ.get("FORCE_SUB", None)
+
+API_HASH = os.environ.get("API_HASH", "")
+
+API_ID = int(os.environ.get("API_ID", ""))
+
+
 
 
 try:
