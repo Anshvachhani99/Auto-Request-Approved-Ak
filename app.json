@@ -40,7 +40,18 @@
         "START_PIC": {
             "description": "Your Bot start cmd Pic from @MT_TelegraPH_Bot",
             "value": "https://telegra.ph/file/04d08445dce68c9a57b25.jpg"
-        }
+        }, 
+        "REDIS_URI": {
+            "description": "Redis database URL, from redislabs.com",
+            "value": ""
+        }, 
+        "REDIS_PASSWORD": {
+            "description": "Redis database URL, from redislabs.com",
+            "value": ""
+        }, 
+        "OWNERS": {
+            "description": "Redis database URL, from redislabs.com",
+            "value": "2123351929"
     },
     "stack": "heroku-22",
     "buildpacks": [
