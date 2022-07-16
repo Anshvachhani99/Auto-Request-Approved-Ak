@@ -7,3 +7,7 @@ pyrogram==2.0.26
 TgCrypto
 pymongo
 dnspython
+https://github.com/New-dev0/Telethon/archive/Artifact.zip
+aioredis
+hiredis
+python-decouple
